@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;1,400&display=swap');
+
+    :root {
+        --text-dark: #151151
+        --text-light: #e5e5e5
+        --white: #ffffff
+    }
+
+ 
+*{
+
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+background:   
+
+ }
+
+
+ body {
+    font-family: "Jost",  Helvetica;
+    color: aliceblue;
+ }
+
+
+ .container{
+
+min-height: 100vh;
+background-image: url(https://pbs.twimg.com/media/ETxypdSVAAI2JLK?format=jpg&name=large);
+background-size: cover;
+background-position: center ;
+background-repeat: no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+ }
+ 
+ .login__form {
+
+   width: 100%;
+   max-width: 420px;
+   padding: 4rem 3rem;
+   margin: 1px;
+   backdrop-filter: blur(8px);
+   border: 2px solid #fff;
+   border-radius: 1.5rem;
+   opacity: 0;
+   transform: translateY(50px);
+   animation: show 0.5s linear forwards;
+
+}
+
+ @keyframes show {
+   100%{
+      opacity: 1;
+      transform:  translateX(1)
+   }
+ }
+
+ .loginform h1{
+   margin-bottom: 2rem;
+   text-align: center;
+   font-size: 50px;
+   text-shadow: 1px 1px  #000000;
+ }
+ 
+
+.Espacio {
+ margin-top: 1.5rem;
+ padding-block: 5px;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+border-bottom: 1px solid white;
+}
+
+
+.Input1 {
+
+   flex: 1;
+   position: relative;
+   isolation: isolate;
+}
+
+.Espacio span{
+   font-size: 1.25rem;
+   color: var(white);
+}
+
+.Input1 label{
+   position: absolute;
+   font-size: 1rem;
+   color: rgb(255, 255, 255);
+   top: 0;
+   left: 0;
+   transition: 0.3s;
+   pointer-events: none;
+}
+
+.Input1 input:not(:placeholder-shown) ~ label, 
+.Input1 input:focus ~ label {
+   font-size: 0.7rem;
+   top: -1.25rem;
+}
+
+
+.Input1 input{
+width: 100%;
+outline: none;
+border: none;
+font-size: 1.2rem;
+color: white;
+background-color: transparent;
+}
+
+#password-eye {
+   cursor: pointer;
+}
